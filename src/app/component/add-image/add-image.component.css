@@ -1,0 +1,137 @@
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .selection-box {
+    position: absolute;
+    border: 2px dashed var(--primary-color);
+    background: rgba(156, 39, 176, 0.2);
+    display: none;
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+  }
+  
+  .upload-container {
+    margin: 2rem 0;
+  }
+  
+  ngx-dropzone {
+    min-height: 200px;
+    background: var(--background-light);
+    border: 2px dashed var(--primary-light);
+  }
+  
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .spinner-container {
+    background: var(--background-light);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .spinner-container p {
+    margin-top: 1rem;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+  }
+  
+  .drop-message {
+    text-align: center;
+  }
+  
+  .drop-message mat-icon {
+    font-size: 48px;
+    width: 48px;
+    height: 48px;
+    color: var(--text-secondary);
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-secondary);
+  }
+  
+  .error {
+    color: #dc3545;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .svg-preview {
+    border: 1px solid var(--primary-light);
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .svg-preview h2 {
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .preview-container {
+    background: var(--background-light);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+  }
+  
+  .preview-container svg {
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+  }
+  
+  button {
+    margin-top: 1rem;
+  }
+  
+  .download-button {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    padding: 10px 24px !important;
+    border-radius: 4px;
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    margin: 1rem auto !important;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-button:hover {
+    background-color: var(--primary-dark) !important;
+  }
+  
+  .z-index-low {
+    z-index: 1;
+  }
+  
+  .z-index-normal {
+    z-index: auto;
+  }

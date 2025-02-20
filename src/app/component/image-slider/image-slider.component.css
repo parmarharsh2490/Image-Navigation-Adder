@@ -1,0 +1,17 @@
+.image{
+    width: 500px;
+    height: 500px;
+    padding: 2;
+}
+
+.image-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    background: var(--background-light);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}

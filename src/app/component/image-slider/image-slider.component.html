@@ -1,0 +1,15 @@
+<p-carousel
+  [value]="imageService.images"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+  autoplayInterval="10000"
+  [responsiveOptions]="responsiveOptions"
+  class="image-container"
+>
+  <ng-template let-image #item>
+    <div class="border border-surface rounded-border m-2 p-4">
+        <div class="w-full rounded-border" [innerHTML]="imageService.getSVG(image.svg)"></div>
+    </div>
+  </ng-template>
+</p-carousel>

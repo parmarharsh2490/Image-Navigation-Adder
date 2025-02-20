@@ -1,0 +1,42 @@
+.image-list {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--surface-ground);
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.image {
+  aspect-ratio: 1;
+  padding: 1rem;
+  background: var(--surface-card);
+  border-radius: 8px;
+  border: 2px solid var(--indigo-500);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3); /* Indigo shadow */
+}
+
+.image svg {
+  max-width: 80%;
+  max-height: 80%;
+  transition: color 0.3s ease;
+}
+
+.image:hover svg {
+  color: var(--indigo-300);
+}
+
+image {
+  max-width: 200px;
+  max-height: 200px;
+}

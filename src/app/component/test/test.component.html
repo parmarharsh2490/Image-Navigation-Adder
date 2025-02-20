@@ -1,0 +1,7 @@
+<div class="image-container">
+  <div
+    *ngFor="let image of images"
+    class="image"
+    [innerHTML]="getSVG(image)"
+  ></div>
+</div>

@@ -1,0 +1,47 @@
+<div
+  class="container"
+  [ngClass]="{ 'z-index-low': loading, 'z-index-normal': !loading }"
+>
+  <div *ngIf="sanitizedSvgContent" class="svg-preview">
+    <div
+      style="display: flex; align-items: center; justify-content: space-between"
+    >
+      <h2>Preview</h2>
+      <p-toggleswitch [(ngModel)]="checked" />
+    </div>
+    <div class="preview-container" [innerHTML]="sanitizedSvgContent"></div>
+   <div style="display: flex; align-items: center; justify-content: space-between;">
+      <p-button (click)="downloadSVG()" label="Download SVG" />
+      <p-button (click)="uploadSVG()" label="Upload SVG" />
+   </div>
+  </div>
+  <h1>ImagePathCraft {{ imageService.images.length }}</h1>
+  <ngx-dropzone (change)="onFileSelected($event)">
+    <ngx-dropzone-label>
+      <div class="drop-message">
+        <mat-icon>cloud_upload</mat-icon>
+        <p>Drop your image here or click to upload</p>
+      </div>
+    </ngx-dropzone-label>
+  </ngx-dropzone>
+
+  <div *ngIf="isConverting" class="loading">Converting image to SVG...</div>
+
+  <div *ngIf="error" class="error">
+    {{ error }}
+  </div>
+</div>
+
+<div class="loading-overlay" *ngIf="loading">
+  <div class="spinner-container">
+    <p-progressSpinner
+      [style]="{ width: '60px', height: '60px' }"
+      styleClass="custom-spinner"
+      strokeWidth="4"
+      animationDuration=".5s"
+    />
+    <p>Converting your image...</p>
+  </div>
+</div>
+
+<div *ngIf="selecting" id="selectionBox" class="selection-box"></div>

@@ -1,0 +1,7 @@
+<div class="image-list">
+  <div
+    [innerHTML]="getSVG(image.svg)"
+    *ngFor="let image of imageService.images"
+    class="image"
+  ></div>
+</div>
