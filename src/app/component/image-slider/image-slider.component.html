@@ -4,11 +4,10 @@
   [numScroll]="1"
   [circular]="true"
   autoplayInterval="10000"
-  class="image-container"
 >
   <ng-template let-image #item>
-    <div class="border-surface rounded-border m-2 p-4">
-        <div class="w-full rounded-border" [innerHTML]="imageService.getSVG(image.svg)"></div>
+    <div class="p-2">
+        <div  [innerHTML]="imageService.getSVG(image.svg)"></div>
     </div>
   </ng-template>
 </p-carousel>
