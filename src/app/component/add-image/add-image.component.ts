@@ -132,7 +132,6 @@ export class AddImageComponent {
               path.getBoundingClientRect().y < endY
             ) {
               const parent = path.parentElement;
-              console.log('Count');
 
               if (!parent) return;
               if (parent.tagName !== 'a') {
@@ -272,7 +271,6 @@ export class AddImageComponent {
             summary: 'Success',
             detail: 'Successfully uploaded Image',
           });
-          console.log(this.imageService.images);
           this.router.navigateByUrl('');
         });
       }

@@ -23,8 +23,9 @@ export class HomepageComponent implements OnInit{
   constructor(private messageService : MessageService){}
   ngOnInit(): void {
     this.imageService.getImages().subscribe(() => {
-      console.log("Success");
-      this.messageService.add({ severity: 'info', summary: 'Success', detail: 'Successfully get Images' });
+      if(this.imageService.images.length == 3){
+        this.messageService.add({ severity: 'info', summary: 'Success', detail: 'Successfully get Images' });
+      }
     })
   }
 }
