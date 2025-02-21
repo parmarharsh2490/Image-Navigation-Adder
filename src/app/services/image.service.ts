@@ -13,9 +13,10 @@ export class ImageService {
     if(this.images.length == 0){
       import("../../assets/images.json").then(images => {
         this.images = images.default as Image[];
+        return of(this.images);
       });
     }
-    return of(this.images);
+    return of([])
   }
   uploadImage(image: Image): Observable<null> {
     this.images.push(image);

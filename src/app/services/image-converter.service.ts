@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import ImageTracer from 'imagetracerjs';
-import { ImageCompresser } from './image-compresser';
 
 @Injectable({
   providedIn: 'root',
@@ -30,7 +29,7 @@ export class ImageConverterService {
 
   private readonly MAX_IMAGE_SIZE = 1500; // Maximum dimension in pixels
 
-  constructor(private imageCompresser: ImageCompresser) {}
+  constructor() {}
 
   async convertToSVG(imageFile: File): Promise<string> {
     return new Promise((resolve, reject) => {
