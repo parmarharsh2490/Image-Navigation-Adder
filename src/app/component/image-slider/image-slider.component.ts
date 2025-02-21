@@ -13,7 +13,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './image-slider.component.css',
 })
 export class ImageSliderComponent {
-  responsiveOptions: any[] | undefined;
 
   constructor(public imageService: ImageService) {}
 }

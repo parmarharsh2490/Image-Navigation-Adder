@@ -1,7 +1,7 @@
-<div class="image-list">
+<div class="container row col-12 sm-column">
   <div
     [innerHTML]="getSVG(image.svg)"
     *ngFor="let image of imageService.images"
-    class="image"
+    class="col-sm-6 mb-6"
   ></div>
 </div>

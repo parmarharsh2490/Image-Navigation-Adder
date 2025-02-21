@@ -15,8 +15,8 @@
       <p-button (click)="uploadSVG()" label="Upload SVG" />
    </div>
   </div>
-  <h1>ImagePathCraft {{ imageService.images.length }}</h1>
-  <ngx-dropzone (change)="onFileSelected($event)">
+  <h1 *ngIf="!sanitizedSvgContent">ImagePathCraft</h1>
+  <ngx-dropzone *ngIf="!sanitizedSvgContent" (change)="onFileSelected($event)">
     <ngx-dropzone-label>
       <div class="drop-message">
         <mat-icon>cloud_upload</mat-icon>

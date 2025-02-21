@@ -1,7 +1,6 @@
 .homepage {
   width: 100%;
   min-height: 100vh;
-  display: flex;
   gap: 2rem;
   padding: 0 2rem 0 2rem;
   background: var(--background-dark);
@@ -14,13 +13,3 @@
   align-items: center;
   gap: 1rem;
 }
-
-/* :host ::ng-deep .p-button {
-  background: var(--primary-color);
-  border-color: var(--primary-color);
-}
-
-:host ::ng-deep .p-button:hover {
-  background: var(--primary-dark);
-  border-color: var(--primary-dark);
-} */
